@@ -3,6 +3,7 @@ title: 文件上传
 date: 2024-12-30
 tags: ['nest', '大文件上传']
 description: nest文件上传
+category: 'note'
 ---
 
 ## 一、大文件上传

@@ -3,6 +3,7 @@ title: ESLint 9.x 配合 unplugin-auto-import 实现自动导入配置
 date: 2025-2-25
 tags: ['eslint']
 description: nest文件上传
+category: 'note'
 ---
 
 ## 1、背景

@@ -3,6 +3,7 @@ title: 人像摄影技巧
 date: 2024-12-01
 tags: ['摄影']
 description: 人像摄影技巧
+category: 'life'
 ---
 
 ## 一. 杂乱的背景

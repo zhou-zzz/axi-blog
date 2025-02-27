@@ -3,6 +3,7 @@ title: NestCLI 使用指南
 date: 2024-12-03
 tags: ['nest', 'cli']
 description: Nest.js 脚手架命令行工具详细使用说明
+category: 'note'
 ---
 
 # Nest CLI 完整指南

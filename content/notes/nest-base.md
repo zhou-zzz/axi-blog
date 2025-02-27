@@ -3,6 +3,7 @@ title: Nest基础概念扫盲
 date: 2024-12-02
 tags: ['nest']
 description: nest基础
+category: 'note'
 ---
 
 ## 一、Nest 介绍

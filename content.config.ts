@@ -10,7 +10,8 @@ export default defineContentConfig({
         description: z.string(),
         date: z.string(),
         tags: z.array(z.string()),
-        plum: z.boolean()
+        plum: z.boolean(),
+        category: z.string(),
       })
     })
   }

@@ -3,6 +3,7 @@ title: TypeScript常用工具类型总结
 date: 2025-02-21
 tags: ['ts']
 description: TypeScript常用工具类型总结
+category: 'blog'
 ---
 
 ## 1、Partial<T>
