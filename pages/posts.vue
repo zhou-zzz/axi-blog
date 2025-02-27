@@ -1,0 +1,18 @@
+<script setup lang="ts">
+const route = useRoute()
+const { data } = await useAsyncData(route.path, () => {
+  return queryCollection('content').path(route.path).all()
+})
+
+</script>
+
+<template>
+  <div>
+    <h1>Blog</h1>
+    <ul>
+      <li v-for="post in posts" :key="post.id">
+        <NuxtLink :to="post.path">{{ post.title }}</NuxtLink>
+      </li>
+    </ul>
+  </div>
+</template>
