@@ -5,6 +5,7 @@ const { data } = await useAsyncData(() => queryCollection('content').path(route.
 </script>
 
 <template>
-  <ContentRenderer v-if="data" :value="data" />
-  <div v-else>Home not found</div>
+  <article class="prose slide-enter m-auto">
+    <ContentRenderer v-if="data" :value="data" />
+  </article>
 </template>

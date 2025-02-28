@@ -21,5 +21,9 @@
       "better-sqlite3",
       "esbuild"
     ]
+  },
+  "devDependencies": {
+    "@unocss/nuxt": "66.1.0-beta.3",
+    "unocss": "66.1.0-beta.3"
   }
 }
