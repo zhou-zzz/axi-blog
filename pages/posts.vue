@@ -5,7 +5,7 @@ const { data: posts } = await useAsyncData('/posts', () => {
 </script>
 
 <template>
-  <div>
+  <div class="prose">
     <h1>Blog</h1>
     <ul>
       <li v-for="post in posts" :key="post.id">

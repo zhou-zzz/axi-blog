@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@nuxt/content": "^3.2.2",
+    "@nuxtjs/color-mode": "^3.5.2",
+    "@vueuse/nuxt": "^12.7.0",
     "nuxt": "^3.15.4",
     "vue": "latest",
     "vue-router": "latest"
@@ -23,6 +25,7 @@
     ]
   },
   "devDependencies": {
+    "@iconify/json": "^2.2.311",
     "@unocss/nuxt": "66.1.0-beta.3",
     "unocss": "66.1.0-beta.3"
   }

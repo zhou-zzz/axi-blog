@@ -264,3 +264,169 @@ h6:focus .header-anchor {
   width: 1.6em;
   border-radius: 50%;
 }
+.prose {
+  max-width: 65ch;
+  margin: 0 auto;
+}
+
+/* 代码块样式 */
+.prose pre {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+.prose pre:not(.shiki) {
+  background-color: var(--c-code-bg);
+  padding: 1rem;
+}
+
+.prose .shiki {
+  font-family: 'DM Mono', 'Input Mono', 'Fira Code', monospace;
+  font-size: 0.92em;
+  line-height: 1.5;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 代码行号 */
+.prose .line-numbers .line {
+  position: relative;
+  padding-left: 2.5em;
+}
+
+.prose .line-numbers .line::before {
+  content: attr(data-line);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--c-text-light);
+  opacity: 0.5;
+  font-size: 0.85em;
+  width: 2em;
+  text-align: right;
+  padding-right: 0.5em;
+}
+
+/* 图片样式 */
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.prose img:hover {
+  transform: scale(1.01);
+}
+
+/* 目录样式 */
+.table-of-contents {
+  position: fixed;
+  top: 90px;
+  bottom: 0;
+  font-size: 0.85em;
+  left: 20px;
+  z-index: 200;
+  overflow: hidden;
+  --uno: hidden lg-flex flex-col w-100px lg-w-200px xl-w-300px;
+}
+
+.table-of-contents > ul {
+  text-overflow: ellipsis;
+  height: 100%;
+  overflow-y: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding-left: 1rem;
+  border-left: 1px solid var(--c-text-light);
+}
+
+*:hover > .table-of-contents > ul {
+  opacity: 0.8;
+}
+
+.table-of-contents ul > li {
+  padding-left: 0.8rem;
+  line-height: 1.5em;
+  margin-top: 0.5em;
+  list-style-type: none;
+}
+
+.table-of-contents ul > li > a {
+  color: var(--c-text-light);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.table-of-contents ul > li > a:hover {
+  color: var(--c-link);
+}
+
+/* 标题锚点 */
+a.header-anchor {
+  float: left;
+  margin-top: 0.125em;
+  margin-left: -1.2em;
+  padding-right: 0.5em;
+  font-size: 0.85em;
+  opacity: 0;
+  text-decoration: none;
+  border: 0 !important;
+  transition: opacity 0.2s ease;
+}
+
+h1:hover .header-anchor,
+h2:hover .header-anchor,
+h3:hover .header-anchor,
+h4:hover .header-anchor,
+h5:hover .header-anchor,
+h6:hover .header-anchor {
+  opacity: 0.6;
+}
+
+a.header-anchor:hover {
+  opacity: 1 !important;
+}
+
+/* 代码行高亮 */
+.prose .highlighted-line {
+  background-color: rgba(255, 255, 0, 0.1);
+  display: block;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+}
+
+.dark .prose .highlighted-line {
+  background-color: rgba(255, 255, 0, 0.05);
+}
+
+/* 引用块样式 */
+.prose blockquote {
+  border-left: 4px solid var(--c-text-light);
+  margin: 1.5rem 0;
+  padding: 0.5rem 0 0.5rem 1rem;
+  color: var(--c-text-light);
+  font-style: italic;
+}
+
+/* 表格样式 */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.prose th,
+.prose td {
+  padding: 0.75rem;
+  border: 1px solid var(--c-code-border);
+}
+
+.prose th {
+  background-color: var(--c-code-bg);
+  font-weight: 600;
+}
