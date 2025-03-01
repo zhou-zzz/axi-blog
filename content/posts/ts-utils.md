@@ -6,7 +6,7 @@ description: TypeScript常用工具类型总结
 category: 'blog'
 ---
 
-## 1、Partial<T>
+## 1、Partial
 - 作用：将类型 T 中所有属性变为可选。
 ```typescript
 interface Person {
@@ -18,7 +18,7 @@ type PartialPerson = Partial<Person>
 // 等价于 type PartialPerson = { name?: string; age?: number; }
 ```
 
-## 2、Required<T>
+## 2、Required
 - 作用：将类型 T 中所有属性变为必选。
 ```typescript
 interface Person {
@@ -29,7 +29,7 @@ type RequiredPerson = Required<Person>
 // 等价于 type RequiredPerson = { name: string; age: number; }
 ```
 
-## 3、Readonly<T>
+## 3、Readonly
 - 作用：将类型 T 中所有属性变为只读。
 ```typescript
 interface Person {
@@ -39,7 +39,7 @@ interface Person {
 type ReadonlyPerson = Readonly<Person>
 // 等价于 type ReadonlyPerson = { readonly name: string; readonly age: number; }
 ```
-## 4、Pick<T, K>
+## 4、Pick
 - 作用：从类型 T 中选择属性 K，返回新的类型。
 ```typescript
 interface Person {
@@ -51,7 +51,7 @@ type PickPerson = Pick<Person, 'name' | 'age'>
 // 等价于 type PickPerson = { name: string; age: number; }
 ```
 
-## 5、Record<K, T>
+## 5、Record
 - 作用：创建一个类型，其属性键为 K，属性值为 T。
 ```typescript
 type Grade = 'A' | 'B' | 'C'
@@ -60,7 +60,7 @@ type RecordScore = Record<Grade, Score>
 // 等价于 type RecordScore = { A: number; B: number; C: number; }
 ```
 
-## 6、Omit<T, K>
+## 6、Omit
 - 作用：从类型 T 中剔除属性 K，返回新的类型。
 ```typescript
 interface Person {
@@ -72,19 +72,19 @@ type OmitPerson = Omit<Person, 'age'>
 // 等价于 type OmitPerson = { name: string; address: string; }
 ```
 
-## 7、Exclude<T, U>
+## 7、Exclude
 - 作用：从类型 T 中剔除可以赋值给类型 U 的类型，返回新的类型。
 ```typescript
 type T0 = Exclude<"a" | "b" | "c", "a">
 // 等价于 type T0 = "b" | "c"
 ```
-## 8、Extract<T, U>
+## 8、Extract
 - 作用：从类型 T 中提取可以赋值给类型 U 的类型，返回新的类型。
 ```typescript
 type T0 = Extract<"a" | "b" | "c", "a">
 // 等价于 type T0 = "a"
 ```
-## 9、ReturnType<T>
+## 9、ReturnType
 - 作用：获取函数 T 的返回类型。
 ```typescript
 function add(a: number, b: number): number {
@@ -93,7 +93,7 @@ function add(a: number, b: number): number {
 type ReturnTypeAdd = ReturnType<typeof add>
 // 等价于 type ReturnTypeAdd = number
 ```
-## 10、Parameters<T>
+## 10、Parameters
 - 作用：获取函数 T 的参数类型。
 ```typescript
 function add(a: number, b: number): number {
@@ -103,15 +103,15 @@ type ParametersAdd = Parameters<typeof add>
 // 等价于 type ParametersAdd = [number, number]
 ```
 
-## 11、NonNullable<T>
+## 11、NonNullable
 - 作用：从类型 T 中剔除 null 和 undefined，返回新的类型。
 ```typescript
 type T0 = NonNullable<string | number | undefined>
 // 等价于 type T0 = string | number
 ```
 
-## 12、Awaited<T>
-- 作用：获取 Promise<T> 的返回类型。
+## 12、Awaited
+- 作用：获取 `Promise<T>` 的返回类型。
 ```typescript
 async function getPromise(): Promise<string> {
   return 'Hello, World!'
