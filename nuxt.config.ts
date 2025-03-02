@@ -13,7 +13,7 @@ export default defineNuxtConfig({
             // Theme used if `html.dark`
             dark: 'vitesse-dark',
             // Theme used if `html.sepia`
-            sepia: 'monokai'
+            sepia: 'monokai',
           },
           preload: [
             'json',
@@ -27,20 +27,20 @@ export default defineNuxtConfig({
             'markdown',
             'yaml',
             'bash',
-            'ini'
-          ]
-        }
-      }
-    }
+            'ini',
+          ],
+        },
+      },
+    },
   },
   colorMode: {
     preference: 'system',
-    fallback:'light',
+    fallback: 'light',
     classSuffix: '',
   },
   css: [
     '@/public/css/main.css',
-    '@/public/css/markdown.css',
+    // '@/public/css/markdown.css',
     // '@/public/css/prose.css',
-  ]
+  ],
 })
