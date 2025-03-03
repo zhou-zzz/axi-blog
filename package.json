@@ -26,6 +26,7 @@
     "@unocss/eslint-plugin": "^65.5.0",
     "@unocss/nuxt": "66.1.0-beta.3",
     "eslint": "^9.20.1",
+    "typescript": "^5.8.2",
     "unocss": "66.1.0-beta.3"
   },
   "pnpm": {
