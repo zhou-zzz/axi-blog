@@ -9,7 +9,7 @@ export default defineNuxtConfig({
         highlight: {
           theme: {
             // Default theme (same as single string)
-            default: 'vitesse-light',
+            default: 'vitesse-dark',
             // Theme used if `html.dark`
             dark: 'vitesse-dark',
           },
@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   },
   css: [
     '@/public/css/main.css',
-    '@/public/css/markdown.css',
-    // '@/public/css/prose.css',
+    // '@/public/css/markdown.css',
+    '@/public/css/prose.css',
   ],
 })

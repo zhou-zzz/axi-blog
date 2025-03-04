@@ -40,24 +40,24 @@ html.dark {
   --c-table-header-bg: #111827;
 }
 
-/* 页面过渡动画 */
-@keyframes slide-enter {
-  0% {
-    transform: translateY(10px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  position: relative;
+  color: #374151; /* text-gray-700 */
 }
 
-.slide-enter-content > * {
-  --enter-stage: 0;
-  --enter-step: 90ms;
-  --enter-initial: 0ms;
-  animation: slide-enter 1s both 1;
-  animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step));
+html.light {
+  background: #fff;
+}
+
+html.dark {
+  background: #050505;
+}
+
+html.dark body {
+  color: #e5e7eb;
 }
 
 /* 视图过渡 */
