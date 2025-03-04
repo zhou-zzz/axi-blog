@@ -2,7 +2,7 @@
 import { Motion } from 'motion-v'
 
 const { data: posts } = await useAsyncData('/posts', () => {
-  return queryCollection('content').where('category', '=', 'blog').order('date', 'DESC').all()
+  return queryCollection('content').where('category', '=', 'note').order('date', 'DESC').all()
 })
 </script>
 
@@ -11,7 +11,7 @@ const { data: posts } = await useAsyncData('/posts', () => {
   <div class="mx-auto px-4 py-8 container">
     <BlurFade :delay="0.1">
       <h1 class="mb-6 text-3xl font-bold">
-        博客文章
+        笔记文章
       </h1>
     </BlurFade>
 

@@ -14,13 +14,14 @@ const skills = [
 ]
 
 const aboutMe = {
-  intro: '我是阿希，软件工程专业毕业，专注于构建可靠、实用的前端应用。作为一名热爱编程的开发者，我努力将技术与创意结合起来。',
+  intro: '我是阿希，拥有4年前端开发经验，专注于构建高质量的交互式应用。作为一名热衷于技术探索的开发者，我在 WebGIS 领域积累了丰富的经验，擅长将地图与数据可视化相结合。',
   points: [
-    '注重代码质量，喜欢实践前端工程化',
-    '保持学习热情，关注技术发展动态',
-    '乐于团队协作，喜欢分享交流技术心得',
+    '专注 WebGIS 领域，擅长地图数据可视化和交互设计',
+    '热衷于前端最佳实践，注重代码质量和工程化',
+    '积极拥抱新技术，探索 LLM 辅助编程的可能性',
+    '喜欢富有创意的交互设计和流畅的动画效果',
   ],
-  outro: '我喜欢探索新技术，解决实际问题，并尝试写出清晰高效的代码。在不断学习的过程中，我享受着编程带来的乐趣，希望能用自己的技能为用户创造价值。',
+  outro: '我享受将复杂的数据通过直观的可视化呈现出来，让用户获得良好的体验。在技术不断迭代的今天，我保持着学习的热情，期待能用我的技能为用户创造更多价值。',
 }
 
 const { data: recentBlog } = await useAsyncData('/posts', () => {
@@ -67,41 +68,40 @@ const showWechatQR = ref(false)
           <p class="mb-4 text-center text-xl md:text-left">
             做一名长期主义者！
           </p>
+          <!-- 社交图标部分 -->
           <div class="mt-4 flex justify-center gap-4 md:justify-start">
             <a
               href="https://github.com/zhou-zzz"
               target="_blank"
-              class="flex items-center justify-center rounded-full p-2 text-gray-700 transition-all duration-300 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+              class="flex items-center justify-center rounded-full p-2 text-zinc-700 transition-all duration-300 hover:bg-zinc-50 dark:text-zinc-300 dark:hover:bg-zinc-900/40"
             >
               <div class="i-uil-github-alt text-xl" title="Github" />
             </a>
-
-            <!-- 微信图标和二维码 -->
+          
             <div class="relative">
               <div
-                class="flex items-center justify-center rounded-full p-2 text-gray-700 transition-all duration-300 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+                class="flex items-center justify-center rounded-full p-2 text-zinc-700 transition-all duration-300 hover:bg-zinc-50 dark:text-zinc-300 dark:hover:bg-zinc-900/40"
                 @mouseenter="showWechatQR = true"
                 @mouseleave="showWechatQR = false"
               >
                 <div class="i-ri-wechat-line text-xl" />
               </div>
-
-              <!-- 微信二维码弹出层 -->
+          
               <div
                 v-show="showWechatQR"
-                class="absolute bottom-full left-1/2 z-10 mb-2 rounded-lg bg-white p-3 shadow-lg transition-all duration-300 -translate-x-1/2 dark:bg-gray-800"
+                class="absolute bottom-full left-1/2 z-10 mb-2 rounded-lg bg-white p-3 shadow-lg transition-all duration-300 -translate-x-1/2 dark:bg-zinc-800"
               >
-                <div class="h-50 w-40 flex items-center justify-center bg-gray-200 text-xs text-gray-500 dark:bg-gray-700 dark:text-gray-400">
+                <div class="h-50 w-40 flex items-center justify-center bg-zinc-100 text-xs text-zinc-500 dark:bg-zinc-700 dark:text-zinc-400">
                   <img src="/public/img/wx.png" class="h-full w-full object-cover" alt="">
                 </div>
-                <div class="absolute left-1/2 h-3 w-3 rotate-45 transform bg-white -bottom-1.5 -translate-x-1/2 dark:bg-gray-800" />
+                <div class="absolute left-1/2 h-3 w-3 rotate-45 transform bg-white -bottom-1.5 -translate-x-1/2 dark:bg-zinc-800" />
               </div>
             </div>
-
+          
             <a
               href="mailto:1635359158@qq.com"
               target="_blank"
-              class="flex items-center justify-center rounded-full p-2 text-gray-700 transition-all duration-300 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+              class="flex items-center justify-center rounded-full p-2 text-zinc-700 transition-all duration-300 hover:bg-zinc-50 dark:text-zinc-300 dark:hover:bg-zinc-900/40"
             >
               <div class="i-carbon-email text-xl" title="邮箱" />
             </a>
@@ -143,7 +143,7 @@ const showWechatQR = ref(false)
             :key="skill"
             :variants="skillItem"
             :custom="idx"
-            class="cursor-default rounded-full from-gray-50 to-gray-100 bg-gradient-to-r px-4 py-1.5 text-sm text-gray-800 font-medium shadow-sm transition-all hover:scale-105 dark:from-gray-800 dark:to-gray-700 dark:text-gray-200 hover:shadow-md dark:hover:from-gray-700 dark:hover:to-gray-600"
+            class="cursor-default rounded-full bg-zinc-50 px-4 py-1.5 text-sm text-zinc-800 font-medium transition-all hover:scale-105 hover:bg-zinc-100 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700"
           >
             {{ skill }}
           </Motion>
@@ -154,19 +154,23 @@ const showWechatQR = ref(false)
         <h2 class="mb-4 text-2xl font-bold">
           最近博客文章
         </h2>
-        <ul class="mb-8 list-none pl-0 space-y-4">
-          <li v-for="post in recentBlog" :key="post.id" class="mb-3">
-            <div class="flex flex-col rounded-md p-2 transition-all hover:bg-gray-100/80 dark:hover:bg-gray-800/50">
-              <NuxtLink
-                :to="post.path"
-                class="text-gray-700 font-medium no-underline transition-colors duration-300 dark:text-gray-300"
-              >
-                {{ post.title }}
-              </NuxtLink>
-              <span class="mt-1 text-sm text-gray-500 dark:text-gray-400">{{ post.date }}</span>
-            </div>
-          </li>
-        </ul>
+        <div class="mb-8 space-y-4">
+          <div v-for="post in recentBlog" :key="post.id" class="group">
+            <NuxtLink
+              :to="post.path"
+              class="block px-2 py-3 no-underline transition-colors duration-300 -mx-2 hover:bg-zinc-50 dark:hover:bg-zinc-900/40"
+            >
+              <div class="flex items-center">
+                <span class="flex-1 text-zinc-800 dark:text-zinc-100">
+                  {{ post.title }}
+                </span>
+              </div>
+              <div class="mt-2 text-sm text-zinc-400 dark:text-zinc-500">
+                <time :datetime="post.date">{{ post.date }}</time>
+              </div>
+            </NuxtLink>
+          </div>
+        </div>
       </BlurFade>
     </div>
   </div>

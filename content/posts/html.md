@@ -1,5 +1,5 @@
 ---
-title: HTML面试复习
+title: HTML复习
 date: 2025-02-17
 tags: ['html', 'interview']
 description: HTML核心知识点与面试要点总结

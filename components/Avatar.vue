@@ -7,16 +7,12 @@ const isHovering = ref(false)
 const hoverAnimation = {
   scale: 1,
   boxShadow: '0 10px 25px rgba(0, 0, 0, 0.2)',
-  transition: {
-    type: 'spring',
-    stiffness: 500,
-    damping: 15,
-  },
 }
 
 const imageAnimation = {
   scale: 1.3,
-  y: -10,
+  y: -40,
+  x: 20,
   transition: {
     type: 'spring',
     stiffness: 700,

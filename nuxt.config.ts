@@ -12,23 +12,7 @@ export default defineNuxtConfig({
             default: 'vitesse-light',
             // Theme used if `html.dark`
             dark: 'vitesse-dark',
-            // Theme used if `html.sepia`
-            sepia: 'monokai',
           },
-          preload: [
-            'json',
-            'js',
-            'ts',
-            'html',
-            'css',
-            'vue',
-            'diff',
-            'shell',
-            'markdown',
-            'yaml',
-            'bash',
-            'ini',
-          ],
         },
       },
     },
@@ -40,7 +24,7 @@ export default defineNuxtConfig({
   },
   css: [
     '@/public/css/main.css',
-    // '@/public/css/markdown.css',
+    '@/public/css/markdown.css',
     // '@/public/css/prose.css',
   ],
 })
