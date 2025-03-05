@@ -23,7 +23,8 @@ nest new project-name
 - 自动初始化项目结构
 - 内置基础配置
 
-![CLI](/imgs/nest/nest-new.png)
+:prose-image{src="/img/nest/nest-new.png"}
+::
 ### 2. 生成代码
 ```bash
 # 生成基础模块
@@ -44,9 +45,14 @@ nest generate resource <name>
 - 自动注入依赖关系
 - 生成相关的 DTO 和接口文件
 
-![CLI](/imgs/nest/transport.png)
-![CLI](/imgs/nest/book.png)
-![CLI](/imgs/nest/nest-generate-resource.png)
+::prose-image{src="/img/nest/transport.png"}
+::
+
+::prose-image{src="/img/nest/book.png"}
+::
+
+::prose-image{src="/img/nest/nest-generate-resource.png"}
+::
 
 ### 3. 项目构建
 ```bash
@@ -89,8 +95,8 @@ nest start --prod
 - 包管理器信息
 - 系统环境信息
 
-![CLI](/imgs/nest/nest-info.png)
-
+::prose-image{src="/img/nest/nest-info.png"}
+::
 ## 三、最佳实践
 1. 使用 `generate resource` 快速搭建完整功能模块
 2. 善用 CLI 的自动注入功能

@@ -12,6 +12,9 @@ export default defineNuxtConfig({
             dark: 'vitesse-black',
           },
         },
+        components: {
+          global: true,
+        },
       },
     },
   },

@@ -22,6 +22,7 @@ function getParentPath() {
         <span>cd ..</span>
       </NuxtLink>
     </div>
+    <BackTop />
   </div>
 </template>
 
