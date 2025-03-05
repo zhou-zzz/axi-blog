@@ -8,10 +8,8 @@ export default defineNuxtConfig({
       markdown: {
         highlight: {
           theme: {
-            // Default theme (same as single string)
-            default: 'vitesse-dark',
-            // Theme used if `html.dark`
-            dark: 'vitesse-dark',
+            default: 'vitesse-light',
+            dark: 'vitesse-black',
           },
         },
       },
@@ -21,10 +19,11 @@ export default defineNuxtConfig({
     preference: 'system',
     fallback: 'light',
     classSuffix: '',
+    dataValue: 'theme',
   },
   css: [
     '@/public/css/main.css',
     // '@/public/css/markdown.css',
-    '@/public/css/prose.css',
+    // '@/public/css/prose.css',
   ],
 })

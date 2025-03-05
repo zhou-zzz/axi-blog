@@ -14,14 +14,13 @@ const skills = [
 ]
 
 const aboutMe = {
-  intro: '我是阿希，拥有4年前端开发经验，专注于构建高质量的交互式应用。作为一名热衷于技术探索的开发者，我在 WebGIS 领域积累了丰富的经验，擅长将地图与数据可视化相结合。',
+  intro: '我是阿希，拥有4年前端开发经验，喜欢构建用户友好的交互式应用。我喜欢前端，同时也喜欢探索和尝试新技术，不断拓展自己的技术边界。',
   points: [
-    '专注 WebGIS 领域，擅长地图数据可视化和交互设计',
     '热衷于前端最佳实践，注重代码质量和工程化',
-    '积极拥抱新技术，探索 LLM 辅助编程的可能性',
+    '积极拥抱新技术，探索 LLM 辅助编程',
     '喜欢富有创意的交互设计和流畅的动画效果',
   ],
-  outro: '我享受将复杂的数据通过直观的可视化呈现出来，让用户获得良好的体验。在技术不断迭代的今天，我保持着学习的热情，期待能用我的技能为用户创造更多价值。',
+  outro: '我享受将复杂的数据通过直观的可视化呈现出来，让用户获得良好的体验。',
 }
 
 const { data: recentBlog } = await useAsyncData('/posts', () => {
@@ -77,7 +76,7 @@ const showWechatQR = ref(false)
             >
               <div class="i-uil-github-alt text-xl" title="Github" />
             </a>
-          
+
             <div class="relative">
               <div
                 class="flex items-center justify-center rounded-full p-2 text-zinc-700 transition-all duration-300 hover:bg-zinc-50 dark:text-zinc-300 dark:hover:bg-zinc-900/40"
@@ -86,7 +85,7 @@ const showWechatQR = ref(false)
               >
                 <div class="i-ri-wechat-line text-xl" />
               </div>
-          
+
               <div
                 v-show="showWechatQR"
                 class="absolute bottom-full left-1/2 z-10 mb-2 rounded-lg bg-white p-3 shadow-lg transition-all duration-300 -translate-x-1/2 dark:bg-zinc-800"
@@ -97,7 +96,7 @@ const showWechatQR = ref(false)
                 <div class="absolute left-1/2 h-3 w-3 rotate-45 transform bg-white -bottom-1.5 -translate-x-1/2 dark:bg-zinc-800" />
               </div>
             </div>
-          
+
             <a
               href="mailto:1635359158@qq.com"
               target="_blank"
@@ -143,7 +142,7 @@ const showWechatQR = ref(false)
             :key="skill"
             :variants="skillItem"
             :custom="idx"
-            class="cursor-default rounded-full bg-zinc-50 px-4 py-1.5 text-sm text-zinc-800 font-medium transition-all hover:scale-105 hover:bg-zinc-100 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700"
+            class="cursor-default rounded-full bg-zinc-50 px-4 py-1.5 text-sm text-zinc-800 font-medium transition-all hover:scale-105 dark:bg-zinc-800 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-700"
           >
             {{ skill }}
           </Motion>
