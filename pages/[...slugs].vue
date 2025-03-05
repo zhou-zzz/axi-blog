@@ -15,6 +15,11 @@ function getParentPath() {
     <article class="slide-enter markdown-body relative m-auto prose">
       <BlurFade :delay="0.1">
         <ContentRenderer v-if="data" :value="data" />
+        <TheEmpty
+          v-else
+          message="暂未找到你搜的文章"
+          description="欢迎你的访问！"
+        />
       </BlurFade>
     </article>
     <div class="mb-4 mt-8 flex justify-start">
@@ -25,32 +30,3 @@ function getParentPath() {
     <BackTop />
   </div>
 </template>
-
-<style scoped>
-.bg-grid-pattern {
-  background-image:
-    linear-gradient(to right, currentColor 1px, transparent 1px),
-    linear-gradient(to bottom, currentColor 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-
-/* 可选：添加渐变遮罩，让网格在边缘渐隐 */
-.bg-grid-pattern::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at center,
-    transparent 0%,
-    var(--bg-color, #ffffff) 100%
-  );
-}
-
-:root {
-  --bg-color: #ffffff;
-}
-
-html.dark {
-  --bg-color: #121212;
-}
-</style>

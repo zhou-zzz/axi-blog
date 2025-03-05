@@ -34,7 +34,7 @@ function handleMouseLeave() {
     <Motion
       :animate="{ scale: 1 }"
       :hover="hoverAnimation"
-      class="h-36 w-36 cursor-pointer border-2 border-gray-700 rounded-full bg-white shadow-md dark:border-gray-200 hover:border-blue-500 dark:bg-white dark:op80 hover:op100 dark:hover:border-blue-400 dark:hover:shadow-blue-500/20"
+      class="h-36 w-36 cursor-pointer border-2 border-gray-700 rounded-full bg-white shadow-md lt-sm:hidden dark:border-gray-200 hover:border-blue-500 dark:bg-white dark:op80 hover:op100 dark:hover:border-blue-400 dark:hover:shadow-blue-500/20"
       @mouseenter="handleMouseEnter"
       @mouseleave="handleMouseLeave"
     >
@@ -52,5 +52,14 @@ function handleMouseLeave() {
         </Motion>
       </div>
     </Motion>
+    <div
+      class="h-36 w-36 overflow-hidden border-2 border-gray-700 rounded-full bg-white shadow-md lt-sm:block sm:hidden dark:border-gray-200 dark:bg-white dark:op80"
+    >
+      <img
+        src="/public/img/avatar.png"
+        alt="Avatar"
+        class="h-full w-full object-cover"
+      >
+    </div>
   </div>
 </template>
