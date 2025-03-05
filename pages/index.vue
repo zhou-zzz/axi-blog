@@ -110,7 +110,7 @@ const showWechatQR = ref(false)
     </div>
 
     <!-- 内容部分 -->
-    <div class="mx-auto max-w-none prose dark:prose-invert">
+    <div class="mx-auto max-w-none">
       <BlurFade :delay="0.2">
         <h2 class="mb-4 text-2xl font-bold">
           关于我

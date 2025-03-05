@@ -23,7 +23,7 @@ export default defineNuxtConfig({
   },
   css: [
     '@/public/css/main.css',
-    // '@/public/css/markdown.css',
-    // '@/public/css/prose.css',
+    '@/public/css/markdown.css',
+    '@/public/css/prose.css',
   ],
 })

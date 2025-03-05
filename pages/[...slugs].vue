@@ -2,24 +2,54 @@
 const route = useRoute()
 const { data } = await useAsyncData(() => queryCollection('content').path(route.path).first())
 
-// 获取上一级路径
 function getParentPath() {
   const pathParts = route.path.split('/')
-  pathParts.pop() // 移除最后一部分
-  return pathParts.join('/') || '/' // 如果为空则返回根路径
+  pathParts.pop()
+  return pathParts.join('/') || '/'
 }
 </script>
 
 <template>
-  <article class="slide-enter markdown-body m-auto prose">
-    <BlurFade :delay="0.1">
-      <ContentRenderer v-if="data" :value="data" />
-    </BlurFade>
-  </article>
-  <div class="mb-4 mt-8 flex justify-start">
-    <NuxtLink :to="getParentPath()" class="flex items-center text-gray-600 transition-colors dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200">
-      <div class="i-carbon-arrow-left mr-1" />
-      <span>cd ..</span>
-    </NuxtLink>
+  <div class="relative">
+    <GridBackground />
+    <article class="slide-enter markdown-body relative m-auto prose">
+      <BlurFade :delay="0.1">
+        <ContentRenderer v-if="data" :value="data" />
+      </BlurFade>
+    </article>
+    <div class="mb-4 mt-8 flex justify-start">
+      <NuxtLink :to="getParentPath()" class="flex items-center text-gray-600 transition-colors dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200">
+        <span>cd ..</span>
+      </NuxtLink>
+    </div>
   </div>
 </template>
+
+<style scoped>
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, currentColor 1px, transparent 1px),
+    linear-gradient(to bottom, currentColor 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* 可选：添加渐变遮罩，让网格在边缘渐隐 */
+.bg-grid-pattern::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    var(--bg-color, #ffffff) 100%
+  );
+}
+
+:root {
+  --bg-color: #ffffff;
+}
+
+html.dark {
+  --bg-color: #121212;
+}
+</style>

@@ -1,43 +1,9 @@
 :root {
   --c-bg: #fff;
-  --c-scrollbar: #eee;
-  --c-scrollbar-hover: #bbb;
-  
-  /* Markdown 相关变量 - 亮色模式 */
-  --c-text: #374151;
-  --c-text-light: #6b7280;
-  --c-text-dark: #111827;
-  --c-heading: #111827;
-  --c-link: #3b82f6;
-  --c-link-hover: #2563eb;
-  --c-code-bg: #f3f4f6;
-  --c-code-inline-bg: rgba(110, 110, 110, 0.1);
-  --c-code-border: #e5e7eb;
-  --c-blockquote-border: #e5e7eb;
-  --c-blockquote-text: #6b7280;
-  --c-table-border: #e5e7eb;
-  --c-table-header-bg: #f9fafb;
 }
 
 html.dark {
   --c-bg: #050505;
-  --c-scrollbar: #111;
-  --c-scrollbar-hover: #222;
-  
-  /* Markdown 相关变量 - 暗色模式 */
-  --c-text: #e5e7eb;
-  --c-text-light: #9ca3af;
-  --c-text-dark: #f3f4f6;
-  --c-heading: #f3f4f6;
-  --c-link: #60a5fa;
-  --c-link-hover: #93c5fd;
-  --c-code-bg: #1f2937;
-  --c-code-inline-bg: rgba(200, 200, 200, 0.1);
-  --c-code-border: #374151;
-  --c-blockquote-border: #4b5563;
-  --c-blockquote-text: #9ca3af;
-  --c-table-border: #374151;
-  --c-table-header-bg: #111827;
 }
 
 body {
@@ -45,15 +11,11 @@ body {
   padding: 0;
   font-family: sans-serif;
   position: relative;
-  color: #374151; /* text-gray-700 */
+  color: #374151;
 }
 
-html.light {
-  background: #fff;
-}
-
-html.dark {
-  background: #050505;
+html {
+  background: var(--c-bg);
 }
 
 html.dark body {
