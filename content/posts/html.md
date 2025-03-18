@@ -238,7 +238,7 @@ el.classList.add('box-style')
 // 推荐方式三：使用 transform 代替位置调整
 el.style.transform = 'translate(10px, 20px)'
 ```
-```
+
 1. CSS头部加载
 - 减少首屏闪烁
 - 提升首屏渲染速度
@@ -258,12 +258,11 @@ el.style.transform = 'translate(10px, 20px)'
 - 页面滚动更流畅
 - 动画性能提升
 - CPU使用率降低
-```
 
 ### 6. 重要面试题
 
 #### 1. 浏览器渲染过程
-```
+
 1. 解析 HTML 生成 DOM 树
    - 解析 HTML 标记为 DOM 节点
    - 构建 DOM 树形结构
@@ -301,10 +300,8 @@ el.style.transform = 'translate(10px, 20px)'
    - JavaScript 放在 body 底部
    - 使用 async/defer 加载脚本
    - 减少关键资源的数量和大小
-```
 
 #### 2. 重排（回流）和重绘
-```
 1. 触发重排的操作
    - 改变元素的大小、位置
    - 改变浏览器窗口大小
@@ -316,14 +313,13 @@ el.style.transform = 'translate(10px, 20px)'
    - 改变元素的背景色
    - 改变元素的透明度
    - visibility 的变化
-```
+
 #### 3. 跨域解决方案
 - CORS
 - JSONP
 - 代理服务器
 - postMessage
 
-```
 - CORS
 - 优点：标准化方案，支持所有请求方式
 - 缺点：需要服务器配合，老浏览器兼容性问题
@@ -339,16 +335,14 @@ el.style.transform = 'translate(10px, 20px)'
 - postMessage
 - 优点：适合跨窗口通信
 - 缺点：使用场景有限，需要双方页面配合
-```
+
 #### 4. 存储方案
 - localStorage
 - sessionStorage
 - Cookie
 - IndexedDB
 
-```
 - localStorage: 持久化存储用户设置、主题等
 - sessionStorage: 表单数据临时保存、页面间数据传递
 - Cookie: 用户认证、追踪
 - IndexedDB: 离线应用、大文件存储
-```
