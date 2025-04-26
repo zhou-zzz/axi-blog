@@ -1,7 +1,7 @@
 ---
 title: 前端树结构操作方法总结
 date: 2025-03-11
-tags: ['javascript', 'algorithm', 'tree', 'typescript']
+tags: ['tree', 'typescript']
 description: 总结前端开发中常用的树结构操作方法，包括树与数组互转、查找、过滤等实用函数
 category: 'blog'
 ---

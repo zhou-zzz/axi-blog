@@ -1,7 +1,7 @@
 ---
 title: 组件封装指南：打造高质量前端组件的实践之道
 date: 2025-03-18
-tags: ['component', 'vue', 'react', 'frontend']
+tags: ['component']
 description: 深入探讨如何设计和封装一个优秀的前端组件，从概念到实践的全面指南
 category: 'blog'
 ---
@@ -276,7 +276,7 @@ export default {
 
 ```vue
 <!-- 基本使用 -->
-<MyComponent 
+<MyComponent
   :data="dataSource"
   theme="light"
   @change="handleChange"
@@ -301,8 +301,6 @@ export default {
 - **Slots**：组件需要哪些插槽来增强灵活性？
 
 接口设计应遵循"最小必要原则"，只暴露必要的配置项，避免过度设计。
-
-
 
 ## 4. 设计内部状态
 
@@ -337,5 +335,3 @@ export default {
 组件化开发是现代前端的核心范式，掌握组件设计与封装的技巧对于提升开发效率和代码质量至关重要。一个优秀的组件不仅能够提高复用性和可维护性，还能为团队协作提供清晰的边界和接口。
 
 在实践中，我们应该根据实际需求选择适当的组件粒度，平衡通用性和特定性，同时兼顾使用者体验和维护者体验。通过不断实践和反思，逐步形成适合团队和项目的组件设计模式。
-
-

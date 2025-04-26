@@ -1,7 +1,7 @@
 ---
 title: SOLID原则：构建健壮可维护的前端代码
 date: 2025-04-14
-tags: ['software design', 'principles', 'SOLID', 'clean code']
+tags: ['SOLID', 'clean code']
 description: 深入浅出地讲解SOLID原则在前端开发中的应用，提升代码质量
 category: 'blog'
 ---
@@ -208,7 +208,7 @@ onMounted(fetchUsers)
 // 错误示例：直接修改验证器
 class FormValidator {
   validate(formData) {
-    let errors = {}
+    const errors = {}
 
     // 验证用户名
     if (!formData.username) {
@@ -252,7 +252,7 @@ class FormValidator {
 
   // 验证表单
   validate(formData) {
-    let errors = {}
+    const errors = {}
 
     Object.keys(this.validators).forEach((field) => {
       const fieldValidators = this.validators[field]
