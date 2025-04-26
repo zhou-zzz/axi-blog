@@ -8,7 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "prepare": "simple-git-hooks"
   },
   "dependencies": {
     "@nuxt/content": "^3.2.2",
@@ -27,6 +28,8 @@
     "@unocss/eslint-plugin": "^65.5.0",
     "@unocss/nuxt": "66.1.0-beta.3",
     "eslint": "^9.20.1",
+    "lint-staged": "^15.5.1",
+    "simple-git-hooks": "^2.13.0",
     "typescript": "^5.8.2",
     "unocss": "66.1.0-beta.3"
   },
@@ -35,7 +38,14 @@
       "@parcel/watcher",
       "better-sqlite3",
       "esbuild",
+      "simple-git-hooks",
       "vue-demi"
     ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
