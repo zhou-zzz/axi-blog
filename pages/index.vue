@@ -160,9 +160,10 @@ const showWechatQR = ref(false)
               class="block px-2 py-3 no-underline transition-colors duration-300 -mx-2 hover:bg-zinc-50 dark:hover:bg-zinc-900/40"
             >
               <div class="flex items-center">
-                <span class="flex-1 text-zinc-800 dark:text-zinc-100">
+                <span class="text-zinc-800 dark:text-zinc-100">
                   {{ post.title }}
                 </span>
+                <span class="ml rounded-sm bg-zinc-100 px-2 py-0.5 text-xs text-zinc-800 font-medium dark:bg-zinc-800 dark:text-zinc-200">{{ post.category }}</span>
               </div>
               <div class="mt-2 text-sm text-zinc-400 dark:text-zinc-500">
                 <time :datetime="post.date">{{ post.date }}</time>
