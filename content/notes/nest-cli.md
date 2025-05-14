@@ -23,7 +23,7 @@ nest new project-name
 - 自动初始化项目结构
 - 内置基础配置
 
-:prose-image{src="/img/nest/nest-new.png"}
+::prose-image{src="/img/nest/nest-new.png"}
 ::
 ### 2. 生成代码
 ```bash
