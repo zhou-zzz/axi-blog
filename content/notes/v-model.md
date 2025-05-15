@@ -1,6 +1,6 @@
 ---
 title: v-model使用技巧
-date: 2025-5-7
+date: 2025-05-07
 tags: ['v-model', 'computed', 'Vue3']
 description: '深入理解Vue3中v-model的使用与二次封装组件实现双向绑定'
 category: 'note'

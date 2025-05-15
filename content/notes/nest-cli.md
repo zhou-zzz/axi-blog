@@ -8,12 +8,12 @@ category: 'note'
 
 # Nest CLI 完整指南
 
-## 一、安装
+## 1、安装
 ```bash
 pnpm install -g @nestjs/cli
 ```
 
-## 二、常用命令
+## 2、常用命令
 
 ### 1. 创建项目
 ```bash
@@ -97,7 +97,7 @@ nest start --prod
 
 ::prose-image{src="/img/nest/nest-info.png"}
 ::
-## 三、最佳实践
+## 3、最佳实践
 1. 使用 `generate resource` 快速搭建完整功能模块
 2. 善用 CLI 的自动注入功能
 3. 根据项目规模选择合适的构建工具（tsc/webpack）

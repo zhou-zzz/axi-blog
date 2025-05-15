@@ -6,7 +6,7 @@ description: nest基础
 category: 'note'
 ---
 
-## 一、Nest 介绍
+## 1、Nest 介绍
 Nest是对标后端Java的Spring框架的后端框架，旨在构建高效、可扩展的Node.js服务器端应用程序。它结合了面向对象编程、函数式编程和响应式编程的元素，提供了一种模块化的架构，使得开发者能够更好地组织代码。
 
 - 1、controller

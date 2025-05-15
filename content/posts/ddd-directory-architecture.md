@@ -1,7 +1,7 @@
 ---
 title: 领域驱动式目录架构设计
-date: 2025-5-14
-tags: ['Domain-Driven-Design', '前端架构', '项目结构']
+date: 2025-05-14
+tags: ['DDD', '前端架构', '项目结构']
 description: '探索如何使用领域驱动设计原则优化前端项目目录结构，提高代码可维护性和可扩展性'
 category: 'blog'
 ---
