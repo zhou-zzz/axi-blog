@@ -1,6 +1,10 @@
 <script setup lang="ts">
+import { useSeo } from '~/composables/useSeo'
+
 const route = useRoute()
 const { data } = await useAsyncData(() => queryCollection('content').path(route.path).first())
+
+useHead(useSeo(data))
 
 const tocLinks = computed(() => data.value?.body?.toc?.links || [])
 

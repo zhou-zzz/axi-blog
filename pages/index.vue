@@ -2,6 +2,10 @@
 import type { Variant } from 'motion-v'
 import { Motion } from 'motion-v'
 
+useHead({
+  title: '首页',
+})
+
 const skills = [
   'Vue.js',
   'React',

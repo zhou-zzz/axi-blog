@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { Motion } from 'motion-v'
 
+useHead({
+  title: '笔记',
+})
+
 const { data: posts } = await useAsyncData('/posts', () => {
   return queryCollection('content').where('category', '=', 'note').order('date', 'DESC').all()
 })

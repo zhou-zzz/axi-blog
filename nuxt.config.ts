@@ -2,6 +2,24 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
+  app: {
+    head: {
+      title: 'Axi Blog',
+      titleTemplate: '%s',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: '这是一个使用 Nuxt 3 构建的个人博客网站，采用了现代前端技术栈，支持暗黑模式和流畅的页面过渡效果。' },
+        { name: 'format-detection', content: 'telephone=no' },
+        { property: 'og:title', content: 'Axi Blog - 个人技术博客' },
+        { property: 'og:description', content: '这是一个使用 Nuxt 3 构建的个人博客网站，采用了现代前端技术栈，支持暗黑模式和流畅的页面过渡效果。' },
+        { property: 'og:type', content: 'website' },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ],
+    },
+  },
   modules: ['@vueuse/nuxt', '@nuxt/content', '@unocss/nuxt', '@nuxtjs/color-mode'],
   content: {
     build: {
@@ -25,11 +43,12 @@ export default defineNuxtConfig({
             'md',
           ],
         },
-        components: {
-          global: true,
-        },
       },
     },
+  },
+  components: {
+    global: true,
+    dirs: ['~/components'],
   },
   colorMode: {
     preference: 'system',
