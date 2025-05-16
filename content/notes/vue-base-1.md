@@ -1,5 +1,5 @@
 ---
-title: Vue基础-1
+title: Vue基础1
 date: 2025-05-15
 tags: ['Vue3']
 description: 'Vue基础'
