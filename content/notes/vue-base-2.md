@@ -6,8 +6,6 @@ description: 'Vue基础'
 category: 'note'
 ---
 
-# Vue基础2笔记精简版
-
 ## 事件处理
 
 Vue提供两种事件处理方式：
