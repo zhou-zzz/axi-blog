@@ -1,5 +1,5 @@
 ---
-title: HTML复习
+title: HTML基础知识
 date: 2025-02-17
 tags: ['html', 'interview']
 description: HTML核心知识点与面试要点总结
@@ -102,7 +102,7 @@ category: 'blog'
 
 #### 加载优化
 - 资源压缩
-```javascript
+```md
 // 代码压缩
 - JavaScript 压缩：去除空格、注释、变量名简化
 - CSS 压缩：合并相同规则、去除无用代码
@@ -120,7 +120,7 @@ gzip_types text/plain text/css application/javascript;
 gzip_min_length 1k;
 ```
 - 懒加载
-```javascript
+```html
 // 图片懒加载
 <img data-src="large-image.jpg" loading="lazy">
 
@@ -142,7 +142,7 @@ const MyComponent = React.lazy(() => import('./MyComponent'));
 </Suspense>
 ```
 - 预加载
-```js
+```html
 // 资源预加载
 <link rel="preload" href="critical.css" as="style">
 <link rel="preload" href="main.js" as="script">

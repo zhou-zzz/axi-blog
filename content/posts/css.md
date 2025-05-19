@@ -1,5 +1,5 @@
 ---
-title: CSS复习
+title: CSS基础
 date: 2025-02-18
 tags: ['css', 'interview']
 description: css核心知识点与面试要点总结
