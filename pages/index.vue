@@ -8,7 +8,7 @@ useHead({
 
 const skills = [
   'Vue.js',
-  'React',
+  'React.js',
   'TypeScript',
   'Node.js',
   'JavaScript',
