@@ -34,6 +34,8 @@ export default defineNuxtConfig({
             'js',
             'typescript',
             'ts',
+            'python',
+            'py',
             'bash',
             'json',
             'css',
