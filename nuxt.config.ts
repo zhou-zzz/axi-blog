@@ -59,8 +59,8 @@ export default defineNuxtConfig({
     dataValue: 'theme',
   },
   css: [
-    '@/public/css/main.css',
-    '@/public/css/markdown.css',
-    '@/public/css/prose.css',
+    '@@/public/css/main.css',
+    '@@/public/css/markdown.css',
+    '@@/public/css/prose.css',
   ],
 })

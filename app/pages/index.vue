@@ -95,7 +95,7 @@ const showWechatQR = ref(false)
                 class="absolute bottom-full left-1/2 z-10 mb-2 rounded-lg bg-white p-3 shadow-lg transition-all duration-300 -translate-x-1/2 dark:bg-zinc-800"
               >
                 <div class="h-50 w-40 flex items-center justify-center bg-zinc-100 text-xs text-zinc-500 dark:bg-zinc-700 dark:text-zinc-400">
-                  <img src="/public/img/wx.png" class="h-full w-full object-cover" alt="">
+                  <img src="@@/public/img/wx.png" class="h-full w-full object-cover" alt="">
                 </div>
                 <div class="absolute left-1/2 h-3 w-3 rotate-45 transform bg-white -bottom-1.5 -translate-x-1/2 dark:bg-zinc-800" />
               </div>

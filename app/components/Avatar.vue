@@ -45,7 +45,7 @@ function handleMouseLeave() {
           class="h-full w-full"
         >
           <img
-            src="/public/img/avatar.png"
+            src="@@/public/img/avatar.png"
             alt="Avatar"
             class="h-full w-full object-cover"
           >
@@ -56,7 +56,7 @@ function handleMouseLeave() {
       class="h-36 w-36 overflow-hidden border-2 border-gray-700 rounded-full bg-white shadow-md lt-sm:block sm:hidden dark:border-gray-200 dark:bg-white dark:op80"
     >
       <img
-        src="/public/img/avatar.png"
+        src="@@/public/img/avatar.png"
         alt="Avatar"
         class="h-full w-full object-cover"
       >
