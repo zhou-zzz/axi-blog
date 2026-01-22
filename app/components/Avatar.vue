@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { VariantType } from 'motion-v'
 import { Motion } from 'motion-v'
 import { ref } from 'vue'
 
@@ -9,7 +10,7 @@ const hoverAnimation = {
   boxShadow: '0 10px 25px rgba(0, 0, 0, 0.2)',
 }
 
-const imageAnimation = {
+const imageAnimation: VariantType = {
   scale: 1.3,
   y: -40,
   x: 20,

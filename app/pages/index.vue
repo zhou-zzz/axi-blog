@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Variant } from 'motion-v'
+import type { VariantType } from 'motion-v'
 import { Motion } from 'motion-v'
 
 useHead({
@@ -18,23 +18,23 @@ const skills = [
 ]
 
 const aboutMe = {
-  intro: '我是阿希，拥有4年前端开发经验，喜欢构建用户友好的交互式应用。我喜欢前端，同时也喜欢探索和尝试新技术，不断拓展自己的技术边界。',
+  intro: '我是阿希，拥有丰富的前端开发经验，喜欢构建用户友好的交互式应用。我喜欢前端，同时也喜欢探索和尝试新技术，不断拓展自己的技术边界。',
   points: [
     '热衷于前端最佳实践，注重代码质量和工程化',
-    '积极拥抱新技术，探索 LLM 辅助编程',
+    '热爱 AI 技术，积极探索 AI 辅助编程和智能应用开发',
     '喜欢富有创意的交互设计和流畅的动画效果',
   ],
   outro: '我享受将复杂的数据通过直观的可视化呈现出来，让用户获得良好的体验。',
 }
 
-const { data: recentBlog } = await useAsyncData('/posts', () => {
+const { data: recentBlog } = await useAsyncData('index', () => {
   return queryCollection('content')
     .order('date', 'DESC')
     .limit(3)
     .all()
 })
 
-const skillItem: Record<string, Variant | ((custom: number) => Variant)> = {
+const skillItem: Record<string, VariantType | ((custom: number) => VariantType)> = {
   hidden: {
     opacity: 0,
   },
@@ -57,7 +57,7 @@ const showWechatQR = ref(false)
 
 <template>
   <Plum />
-  <div class="mx-auto px-4 py-8 container">
+  <div class="container mx-auto px-4 py-8">
     <div class="mb-12 flex flex-col items-center md:flex-row md:items-start md:gap-8">
       <div class="mb-6 md:mb-0">
         <Avatar />

@@ -41,7 +41,7 @@ onMounted(() => {
     },
     {
       rootMargin: props.inViewMargin,
-    }
+    },
   )
 
   if (elementRef.value) {
@@ -54,24 +54,17 @@ onMounted(() => {
 })
 
 const variants = {
-  hidden: { 
-    y: props.yOffset, 
-    opacity: 0, 
-    filter: `blur(${props.blur})` 
+  hidden: {
+    y: props.yOffset,
+    opacity: 0,
+    filter: `blur(${props.blur})`,
   },
-  visible: { 
-    y: -props.yOffset, 
-    opacity: 1, 
-    filter: 'blur(0px)' 
+  visible: {
+    y: -props.yOffset,
+    opacity: 1,
+    filter: 'blur(0px)',
   },
 }
-
-const transition = {
-  delay: 0.04 + props.delay,
-  duration: props.duration,
-  ease: 'easeOut',
-}
-
 </script>
 
 <template>
@@ -80,7 +73,11 @@ const transition = {
     :initial="variants.hidden"
     :animate="isVisible ? variants.visible : variants.hidden"
     :exit="variants.hidden"
-    :transition="transition"
+    :transition="{
+      delay: 0.04 + props.delay,
+      duration: props.duration,
+      ease: [0.25, 0.1, 0.25, 1],
+    }"
     :class="className"
   >
     <slot />

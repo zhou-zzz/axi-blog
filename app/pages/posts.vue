@@ -5,14 +5,14 @@ useHead({
   title: '博客',
 })
 
-const { data: posts } = await useAsyncData('/posts', () => {
+const { data: posts } = await useAsyncData('posts', () => {
   return queryCollection('content').where('category', '=', 'blog').order('date', 'DESC').all()
 })
 </script>
 
 <template>
   <Plum />
-  <div class="mx-auto px-4 py-8 container">
+  <div class="container mx-auto px-4 py-8">
     <BlurFade :delay="0.1">
       <h1 class="mb-6 text-3xl font-bold">
         博客文章
