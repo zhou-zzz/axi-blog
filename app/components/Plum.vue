@@ -16,6 +16,9 @@ const init = ref(4)
 const len = ref(6)
 const stopped = ref(false)
 
+const prefersReducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)')
+const documentVisibility = useDocumentVisibility()
+
 function initCanvas(canvas: HTMLCanvasElement, width = 400, height = 400, _dpi?: number) {
   const ctx = canvas.getContext('2d')!
 
@@ -41,6 +44,11 @@ function polar2cart(x = 0, y = 0, r = 0, theta = 0) {
 }
 
 onMounted(async () => {
+  // Skip animation if user prefers reduced motion
+  if (prefersReducedMotion.value) {
+    return
+  }
+
   const canvas = el.value!
   const { ctx } = initCanvas(canvas, size.width, size.height)
   const { width, height } = canvas
@@ -114,6 +122,23 @@ onMounted(async () => {
     stopped.value = false
   }
 
+  // Pause/resume based on page visibility
+  watch(documentVisibility, (visibility) => {
+    if (!stopped.value) {
+      if (visibility === 'visible') {
+        controls.resume()
+      }
+      else {
+        controls.pause()
+      }
+    }
+  })
+
+  // Cleanup on unmount
+  onUnmounted(() => {
+    controls.pause()
+  })
+
   start.value()
 })
 const mask = computed(() => 'radial-gradient(circle, transparent, black);')
@@ -121,7 +146,7 @@ const mask = computed(() => 'radial-gradient(circle, transparent, black);')
 
 <template>
   <div
-    class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none"
+    class="pointer-events-none fixed bottom-0 left-0 right-0 top-0"
     style="z-index: -1"
     :style="`mask-image: ${mask};--webkit-mask-image: ${mask};`"
   >

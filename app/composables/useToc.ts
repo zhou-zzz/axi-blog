@@ -4,8 +4,22 @@ import { useIntersectionObserver } from '@vueuse/core'
 export function useToc(links: TocLink[]) {
   const activeLink = ref('')
   const userClicked = ref(false)
-  const clickTimeout = ref<NodeJS.Timeout>()
+  const clickTimeout = ref<ReturnType<typeof setTimeout>>()
   const observerStops = ref<(() => void)[]>([])
+
+  // Cache DOM element references
+  const elementCache = new Map<string, HTMLElement>()
+
+  function getElement(id: string): HTMLElement | null {
+    if (elementCache.has(id)) {
+      return elementCache.get(id)!
+    }
+    const el = document.getElementById(id)
+    if (el) {
+      elementCache.set(id, el)
+    }
+    return el
+  }
 
   function initToc() {
     if (!import.meta.client || !links.length)
@@ -16,14 +30,14 @@ export function useToc(links: TocLink[]) {
     }
 
     links.forEach((link) => {
-      const el = document.getElementById(link.id)
+      const el = getElement(link.id)
       if (!el)
         return
 
       const { stop } = useIntersectionObserver(
         el,
-        ([{ isIntersecting }]) => {
-          if (!userClicked.value && isIntersecting) {
+        ([entry]) => {
+          if (!userClicked.value && entry?.isIntersecting) {
             activeLink.value = link.id
           }
         },
@@ -39,6 +53,7 @@ export function useToc(links: TocLink[]) {
     return () => {
       observerStops.value.forEach(stop => stop())
       observerStops.value = []
+      elementCache.clear()
 
       if (clickTimeout.value) {
         clearTimeout(clickTimeout.value)
@@ -47,7 +62,11 @@ export function useToc(links: TocLink[]) {
   }
 
   function scrollToHeading(id: string) {
-    document.getElementById(id)?.scrollIntoView({
+    const el = getElement(id)
+    if (!el)
+      return
+
+    el.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
     })

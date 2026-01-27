@@ -646,6 +646,7 @@ class FullFeaturedTable implements
 <script setup>
 import { computed, watchEffect } from 'vue'
 import useSort from './composables/useSort'
+
 defineProps({
   data: Array,
   columns: Array

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(wc:*)",
+      "Bash(du:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(sort:*)",
+      "Bash(pnpm add:*)",
+      "Bash(cd /Users/axi/Code/axi-blog/public/img && sips:*)",
+      "Bash(sips -s format png -s formatOptions 70 avatar.png --out avatar.png)",
+      "Bash(pnpm lint:*)",
+      "Bash(gh api:*)",
+      "Bash(gh repo view:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(pnpm remove:*)"
+    ]
+  }
+}

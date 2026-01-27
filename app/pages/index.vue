@@ -2,8 +2,13 @@
 import type { VariantType } from 'motion-v'
 import { Motion } from 'motion-v'
 
-useHead({
-  title: '首页',
+useSeoMeta({
+  title: '首页 - Axi Blog',
+  description: '欢迎来到阿希的个人技术博客，分享前端开发经验、Vue.js、TypeScript 等技术文章。',
+  ogTitle: 'Axi Blog - 个人技术博客',
+  ogDescription: '欢迎来到阿希的个人技术博客，分享前端开发经验、Vue.js、TypeScript 等技术文章。',
+  ogType: 'website',
+  twitterCard: 'summary',
 })
 
 const skills = [
@@ -95,7 +100,7 @@ const showWechatQR = ref(false)
                 class="absolute bottom-full left-1/2 z-10 mb-2 rounded-lg bg-white p-3 shadow-lg transition-all duration-300 -translate-x-1/2 dark:bg-zinc-800"
               >
                 <div class="h-50 w-40 flex items-center justify-center bg-zinc-100 text-xs text-zinc-500 dark:bg-zinc-700 dark:text-zinc-400">
-                  <img src="@@/public/img/wx.png" class="h-full w-full object-cover" alt="">
+                  <NuxtImg src="/img/wx.png" class="h-full w-full object-cover" alt="微信二维码" format="webp" quality="80" />
                 </div>
                 <div class="absolute left-1/2 h-3 w-3 rotate-45 transform bg-white -bottom-1.5 -translate-x-1/2 dark:bg-zinc-800" />
               </div>

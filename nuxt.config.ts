@@ -2,6 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-16',
   devtools: { enabled: true },
+
+  runtimeConfig: {
+    public: {
+      siteUrl: 'https://helloaxi.me',
+    },
+  },
+
   app: {
     head: {
       title: 'Axi Blog',
@@ -14,13 +21,30 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'Axi Blog - 个人技术博客' },
         { property: 'og:description', content: '这是一个使用 Nuxt 3 构建的个人博客网站，采用了现代前端技术栈，支持暗黑模式和流畅的页面过渡效果。' },
         { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'Axi Blog' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       ],
     },
   },
-  modules: ['@vueuse/nuxt', '@nuxt/content', '@unocss/nuxt', '@nuxtjs/color-mode', 'motion-v/nuxt'],
+  modules: ['@vueuse/nuxt', '@nuxt/content', '@unocss/nuxt', '@nuxtjs/color-mode', 'motion-v/nuxt', '@nuxt/image', '@nuxtjs/sitemap'],
+
+  site: {
+    url: 'https://helloaxi.me',
+  },
+
+  image: {
+    quality: 80,
+    format: ['webp', 'png'],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+    },
+  },
   content: {
     build: {
       markdown: {

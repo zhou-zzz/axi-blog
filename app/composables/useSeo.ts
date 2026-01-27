@@ -31,7 +31,7 @@ export function useSeo(data: Data) {
         { property: 'article:tag', content: tags.value.join(', ') },
         { name: 'keywords', content: tags.value.join(', ') },
         { property: 'og:site_name', content: 'Axi Blog' },
-        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:card', content: 'summary' },
         { name: 'twitter:title', content: title.value },
         { name: 'twitter:description', content: description.value },
       ],

@@ -101,11 +101,11 @@ export function filterAsyncRoutes(routes, roles) {
 
 ## Pinia用户状态管理（登录、保存角色）
 ```ts
+import { defineStore } from 'pinia'
 // stores/user.ts
 import { asyncRoutes, } from '@/router/async-routes'
 import { constantRoutes } from '@/router/constant-routes'
 import { filterAsyncRoutes } from '@/utils/permission'
-import { defineStore } from 'pinia'
 
 export const useUserStore = defineStore('user', {
   state: () => ({
@@ -127,9 +127,9 @@ export const useUserStore = defineStore('user', {
 ```
 ## 动态注册路由（登录后动态挂载）
 ```ts
+import { createRouter, createWebHistory } from 'vue-router'
 // router/index.ts
 import { useUserStore } from '@/stores/user'
-import { createRouter, createWebHistory } from 'vue-router'
 import { constantRoutes } from './constant-routes'
 
 const router = createRouter({

@@ -7,28 +7,32 @@ const props = defineProps<{
   alt?: string
 }>()
 
-const imgRef = ref<HTMLImageElement>()
+const containerRef = ref<HTMLDivElement>()
 
 onMounted(() => {
-  if (imgRef.value) {
-    mediumZoom(imgRef.value, {
-      margin: 10,
-      background: 'rgba(0, 0, 0, 0.8)',
-      scrollOffset: 0,
-    })
+  if (containerRef.value) {
+    const img = containerRef.value.querySelector('img')
+    if (img) {
+      mediumZoom(img, {
+        margin: 10,
+        background: 'rgba(0, 0, 0, 0.8)',
+        scrollOffset: 0,
+      })
+    }
   }
 })
 </script>
 
 <template>
-  <div class="content-image">
-    <img
-      ref="imgRef"
+  <div ref="containerRef" class="content-image">
+    <NuxtImg
       :src="props.src"
       :alt="props.alt"
       class="rounded-lg"
       loading="lazy"
-    >
+      format="webp"
+      quality="80"
+    />
   </div>
 </template>
 

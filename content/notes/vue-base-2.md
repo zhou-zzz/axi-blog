@@ -110,6 +110,7 @@ Vue3中组件可以使用`defineModel()`简化v-model实现：
 <script setup>
 import { ref } from 'vue'
 import Counter from './Counter.vue'
+
 const model = defineModel()
 
 function increment() {
@@ -342,6 +343,7 @@ onMounted(() => {
 <script setup>
 import { ref } from 'vue'
 import ChildComponent from './ChildComponent.vue'
+
 const props = defineProps({
   message: {
     type: String,

@@ -75,13 +75,13 @@ type OmitPerson = Omit<Person, 'age'>
 ## 7、Exclude
 - 作用：从类型 T 中剔除可以赋值给类型 U 的类型，返回新的类型。
 ```typescript
-type T0 = Exclude<"a" | "b" | "c", "a">
+type T0 = Exclude<'a' | 'b' | 'c', 'a'>
 // 等价于 type T0 = "b" | "c"
 ```
 ## 8、Extract
 - 作用：从类型 T 中提取可以赋值给类型 U 的类型，返回新的类型。
 ```typescript
-type T0 = Extract<"a" | "b" | "c", "a">
+type T0 = Extract<'a' | 'b' | 'c', 'a'>
 // 等价于 type T0 = "a"
 ```
 ## 9、ReturnType

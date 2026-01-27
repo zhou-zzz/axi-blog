@@ -139,6 +139,7 @@ npx simple-git-hooks
 **scripts/verify-commit-msg.js**:
 ```js
 const fs = require('node:fs')
+
 const msgPath = process.argv[2]
 const msg = fs.readFileSync(msgPath, 'utf-8').trim()
 
