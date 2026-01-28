@@ -4,7 +4,7 @@ import { Motion } from 'motion-v'
 
 defineProps<{
   title: string
-  posts: ContentCollectionItem[] | null
+  posts?: ContentCollectionItem[] | null
 }>()
 </script>
 

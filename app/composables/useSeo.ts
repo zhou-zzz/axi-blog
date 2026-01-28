@@ -1,6 +1,6 @@
 import type { ContentCollectionItem } from '@nuxt/content'
 
-type Data = Ref<ContentCollectionItem | null>
+type Data = Ref<ContentCollectionItem | null | undefined>
 
 export function useSeo(data: Data) {
   const route = useRoute()

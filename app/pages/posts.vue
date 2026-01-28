@@ -15,5 +15,5 @@ const { data: posts } = await useAsyncData('posts', () => {
 
 <template>
   <Plum />
-  <PostList title="博客文章" :posts="posts" />
+  <PostList title="博客文章" :posts="posts " />
 </template>

@@ -15,7 +15,10 @@
       "Bash(gh repo view:*)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "Bash(pnpm remove:*)"
+      "Bash(pnpm remove:*)",
+      "Bash(done)",
+      "WebFetch(domain:innei.in)",
+      "Bash(npx nuxi typecheck:*)"
     ]
   }
 }
